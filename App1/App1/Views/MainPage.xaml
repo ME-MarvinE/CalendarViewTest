@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="App1.Views.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:xcViews="clr-namespace:XCalendar.Forms.Views;assembly=XCalendar.Forms"
+    xmlns:ViewModels="clr-namespace:App1.ViewModels"
+    x:DataType="{x:Type ViewModels:MainPageViewModel}">
+
+    <StackLayout>
+
+        <xcViews:CalendarView
+                    x:Name="MyCally"
+                    Days="{Binding Calendar.Days}"
+                    DaysOfWeek="{Binding Calendar.DayNamesOrder}"
+                    NavigatedDate="{Binding Calendar.NavigatedDate}">
+            <xcViews:CalendarView.NavigationViewTemplate>
+                <ControlTemplate>
+                    <Label Text=" asdfasdfasdf" />
+                </ControlTemplate>
+            </xcViews:CalendarView.NavigationViewTemplate>
+        </xcViews:CalendarView>
+
+        <!--<xcViews:CalendarView
+            BackgroundColor="Brown"
+            Days="{Binding Calendar.Days}"
+            DaysOfWeek="{Binding Calendar.DayNamesOrder}"
+            HorizontalOptions="CenterAndExpand"
+            NavigatedDate="{Binding Calendar.NavigatedDate}"
+            VerticalOptions="CenterAndExpand">
+        </xcViews:CalendarView>-->
+    </StackLayout>
+
+</ContentPage>
